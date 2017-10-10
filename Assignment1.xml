@@ -15,13 +15,13 @@
       ImageGeometryOutputEnabled="FALSE">
       <DataSources>
         <DataSource
-		  Type="Video"
-		  Id="Video"
-		  PortName="B"
-		  BufferSize="200"
-		  AveragedItemsForFiltering="20"
-		  PortUsImageOrientation="UF"
-		  />
+	  Type="Video"
+	  Id="Video"
+	  PortName="B"
+	  BufferSize="200"
+	  AveragedItemsForFiltering="20"
+	  PortUsImageOrientation="UF"
+	  />
       </DataSources>
       <OutputChannels>
         <OutputChannel Id="VideoStream" VideoDataSourceId="Video" />
@@ -69,23 +69,14 @@
     </Device>
   </DataCollection>
   
+    
   <PlusOpenIGTLinkServerxxx 
     MaxNumberOfIgtlMessagesToSend="1" 
     MaxTimeSpentWithProcessingMs="250" 
     ListeningPort="18944" 
     SendValidTransformsOnly="true" 
     OutputChannelId="TrackedBoneVideoStream" > 
-    <DefaultClientInfo> 
-      <MessageTypes> 
-        <Message Type="IMAGE" />
-        <Message Type="TRANSFORM" />
-      </MessageTypes>
-      <TransformNames> 
-      <xTransform Name="ProbeToTracker" />
-      </TransformNames>
-    <ImageNames>
-      <Image Name="Image" EmbeddedTransformToFrame="Image" />
-    </ImageNames>
+    <DefaultClientInfo>
     </DefaultClientInfo>
   </PlusOpenIGTLinkServerxxx>
 
@@ -96,17 +87,7 @@
     ListeningPort="18945" 
     SendValidTransformsOnly="true" 
     OutputChannelId="VideoStream" > 
-    <DefaultClientInfo> 
-      <MessageTypes> 
-        <Message Type="IMAGE" />
-        <Message Type="TRANSFORM" />
-      </MessageTypes>
-      <TransformNames> 
-      <xTransform Name="ProbeToTracker" />
-      </TransformNames>
-    <ImageNames>
-      <Image Name="Image" EmbeddedTransformToFrame="Image" />
-    </ImageNames>
+    <DefaultClientInfo>
     </DefaultClientInfo>
   </PlusOpenIGTLinkServer> 
 
