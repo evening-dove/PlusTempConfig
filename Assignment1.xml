@@ -35,7 +35,7 @@
         <InputChannel Id="VideoStream" />
       </InputChannels>
       <OutputChannels>
-        <OutputChannel Id="TrackedBoneVideoStream" VideoDataSourceId="Video" />
+        <OutputChannel Id="BoneVideoStream" VideoDataSourceId="Video" />
       </OutputChannels>
       <Processor Type="vtkPlusTransverseProcessEnhancer" NumberOfScanLines="200" NumberOfSamplesPerScanLine="210">
           <ScanConversion 
@@ -70,15 +70,15 @@
   </DataCollection>
   
     
-  <PlusOpenIGTLinkServerxxx 
+  <PlusOpenIGTLinkServer 
     MaxNumberOfIgtlMessagesToSend="1" 
     MaxTimeSpentWithProcessingMs="250" 
     ListeningPort="18944" 
     SendValidTransformsOnly="true" 
-    OutputChannelId="TrackedBoneVideoStream" > 
+    OutputChannelId="BoneVideoStream" > 
     <DefaultClientInfo>
     </DefaultClientInfo>
-  </PlusOpenIGTLinkServerxxx>
+  </PlusOpenIGTLinkServer>
 
   <!-- Enable this Server's port in Slicer to see the input image along with the processed image -->
   <PlusOpenIGTLinkServer 
